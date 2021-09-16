@@ -69,9 +69,27 @@ public final class XOptional<T> {
         return value == null ? empty() : of(value);
     }
 
+    /**
+     * 值是否不为空
+     *
+     * @return true-值不为空， false-值为空
+     */
+    public boolean isPresent() {
+        return null != value;
+    }
 
     /**
-     * 获取值，如果值为空会抛出 {@link NoSuchElementException}
+     * 如果值为空则抛出异常
+     *
+     * @return T
+     */
+    public T get() {
+        if (null != value) return value;
+        throw new NoSuchElementException("No value present");
+    }
+
+    /**
+     * 获取值，可能为空，请自行判断
      *
      * @return T
      */
