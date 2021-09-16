@@ -6,7 +6,7 @@ import com.alibaba.fastjson.parser.ParserConfig;
 /**
  * 针对Ok序列化的JSON工具的局部设置
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-09-13
  */
 public class FastJSONParserConfig {

@@ -8,7 +8,7 @@ import java.util.function.BiConsumer;
 /**
  * 请求头构造器
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-09
  */
 public class HttpHeaders {

@@ -10,7 +10,7 @@ import org.xtan.ok.http.wrapper.*;
 /**
  * 请求构造的工厂
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-05
  */
 public class RequestFactory {

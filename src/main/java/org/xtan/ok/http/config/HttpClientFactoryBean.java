@@ -9,7 +9,7 @@ import org.xtan.ok.http.proxy.HttpClientProxyHandler;
  * 扫描HttpClient接口实例
  * 并将接口代理类注册成bean
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-11
  */
 public class HttpClientFactoryBean implements FactoryBean<Object>, InitializingBean {

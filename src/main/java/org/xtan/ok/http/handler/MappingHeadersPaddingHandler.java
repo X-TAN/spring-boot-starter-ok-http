@@ -6,16 +6,16 @@ import org.xtan.ok.http.annotation.Headers;
 import org.xtan.ok.http.exception.HttpClientException;
 import org.xtan.ok.http.model.HttpHeaders;
 import org.xtan.ok.http.model.HttpMapping;
+import org.xtan.ok.http.utils.XOptional;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.util.Arrays;
-import java.util.Optional;
 
 /**
  * 请求头填充处理器
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-09
  */
 public class MappingHeadersPaddingHandler {
@@ -82,7 +82,7 @@ public class MappingHeadersPaddingHandler {
      */
     public static HttpHeaders loadAnnotationHeaders(Headers annotation) {
         HttpHeaders httpHeaders = HttpHeaders.builder();
-        Optional.ofNullable(annotation)
+        XOptional.ofNullable(annotation)
                 .ifPresent(headers -> Arrays.stream(headers.value())
                         .filter(StringUtils::isNotBlank)
                         .map(it -> it.split(":"))

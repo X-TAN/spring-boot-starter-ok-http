@@ -5,7 +5,7 @@ import java.lang.annotation.*;
 /**
  * 申明为OkHttp接口请求类
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-06
  */
 @Target(ElementType.TYPE)

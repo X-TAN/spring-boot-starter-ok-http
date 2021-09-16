@@ -3,7 +3,7 @@ package org.xtan.ok.http.constants;
 /**
  * http请求前缀
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-09
  */
 public interface HttpPrefix {

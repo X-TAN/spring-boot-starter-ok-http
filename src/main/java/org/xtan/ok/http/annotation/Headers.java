@@ -17,7 +17,7 @@ import java.lang.annotation.*;
  * 2. method(@Headers Headers headers)
  * </pre>
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-06
  */
 @Target({ElementType.TYPE, ElementType.METHOD, ElementType.PARAMETER})

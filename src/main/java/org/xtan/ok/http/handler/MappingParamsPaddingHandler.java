@@ -7,6 +7,7 @@ import org.xtan.ok.http.annotation.paramer.JSONBody;
 import org.xtan.ok.http.annotation.paramer.Param;
 import org.xtan.ok.http.annotation.paramer.PathParam;
 import org.xtan.ok.http.exception.HttpClientException;
+import org.xtan.ok.http.utils.XOptional;
 
 import java.io.File;
 import java.io.InputStream;
@@ -18,7 +19,7 @@ import java.util.Collection;
 /**
  * 映射参数填充处理器
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-10
  */
 public class MappingParamsPaddingHandler {
@@ -56,7 +57,7 @@ public class MappingParamsPaddingHandler {
     /**
      * 如果只是文件流请求
      *
-     * @author: X-TAN
+     * @author: XOptional-TAN
      * @date: 2021-08-10
      */
     private static void onlyFileParams(OkBuilder okBuilder, Object arg, Method method) {
@@ -81,7 +82,7 @@ public class MappingParamsPaddingHandler {
     /**
      * 常规参数解析设定
      *
-     * @author: X-TAN
+     * @author: XOptional-TAN
      * @date: 2021-08-10
      */
     @SuppressWarnings("unchecked")
@@ -118,9 +119,12 @@ public class MappingParamsPaddingHandler {
             okBuilder.params(paramName, (Double) arg);
             return;
         }
+        if (arg instanceof Float) {
+            okBuilder.params(paramName, (Float) arg);
+            return;
+        }
         if (arg instanceof Character) {
             okBuilder.params(paramName, (Character) arg);
-            return;
         }
     }
 }

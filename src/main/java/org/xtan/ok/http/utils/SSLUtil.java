@@ -8,7 +8,7 @@ import java.security.cert.X509Certificate;
 /**
  * SSL
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-05
  */
 public class SSLUtil {

@@ -8,7 +8,7 @@ import org.xtan.ok.http.model.HttpRequest;
 /**
  * delete请求
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-05
  */
 public class DeleteRequestWrapper implements RequestWrapper {

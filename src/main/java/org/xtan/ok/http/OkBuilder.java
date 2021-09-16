@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * okHttp的工具类，建造者模式
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-05
  */
 public final class OkBuilder {
@@ -238,21 +238,15 @@ public final class OkBuilder {
      */
     public String execute() {
         try (Response response = beforeExecute()) {
-            if (null == response) {
-                throw new HttpClientException("Request failed, Not responding!");
+            if (null != response) {
+                ResponseBody body = response.body();
+                if (null != body) return body.string();
             }
-            ResponseBody body = response.body();
-            if (null != body) return body.string();
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
-
-    public Response response() {
-        return beforeExecute();
-    }
-
 
     /**
      * 构造ws的请求
@@ -307,13 +301,10 @@ public final class OkBuilder {
      */
     public InputStream executeStream() {
         try (Response response = beforeExecute()) {
-            if (null == response) {
-                throw new IOException("Request failed, Not responding!");
+            if (null != response) {
+                ResponseBody body = response.body();
+                if (null != body) return body.byteStream();
             }
-            ResponseBody body = response.body();
-            if (null != body) return body.byteStream();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
         return null;
     }
@@ -325,11 +316,10 @@ public final class OkBuilder {
      */
     public byte[] executeBytes() {
         try (Response response = beforeExecute()) {
-            if (null == response) {
-                throw new IOException("Request failed, Not responding!");
+            if (null != response) {
+                ResponseBody body = response.body();
+                if (null != body) return body.bytes();
             }
-            ResponseBody body = response.body();
-            if (null != body) return body.bytes();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -341,16 +331,10 @@ public final class OkBuilder {
      *
      * @return
      */
-    private Response executeResponse() {
+    private Response response() {
         try (Response response = beforeExecute()) {
-            if (null == response) {
-                throw new IOException("Request failed, Not responding!");
-            }
             return response;
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-        return null;
     }
 
 

@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 /**
  * 开启httpClient自动装配
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-11
  */
 @Retention(RetentionPolicy.RUNTIME)

@@ -103,7 +103,7 @@
 >静态 - Class
 >```java
 >@HttpClient("localhost:8080")
->@Headers({"version:1.0.0", "author:X-TAN"})
+>@Headers({"version:1.0.0", "author:XOptional-TAN"})
 >public interface TestClient {
 >    
 >}
@@ -114,7 +114,7 @@
 >public interface TestClient {
 >    
 >@Get("test")
->@Headers({"version:1.0.0", "author:X-TAN"})
+>@Headers({"version:1.0.0", "author:XOptional-TAN"})
 >String test(@Param("id") Integer id);
 >    
 >}

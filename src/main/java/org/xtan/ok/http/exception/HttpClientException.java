@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 /**
  * httpclient异常类
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-06
  */
 public class HttpClientException extends RuntimeException {

@@ -16,7 +16,7 @@ import static com.alibaba.fastjson.util.IOUtils.UTF8;
 /**
  * 日志拦截器
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-05
  */
 public class LogInterceptor implements Interceptor {

@@ -6,7 +6,7 @@ import org.springframework.core.env.Environment;
  * 配置参数操作组件
  * (单例)
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-09-13
  */
 public class EnvironmentComponent {

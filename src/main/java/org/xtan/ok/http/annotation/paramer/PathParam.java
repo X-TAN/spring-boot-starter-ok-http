@@ -17,7 +17,7 @@ import java.lang.annotation.*;
  * /user/{id}/{detailId}
  * </pre>
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-09
  */
 @Target(ElementType.PARAMETER)

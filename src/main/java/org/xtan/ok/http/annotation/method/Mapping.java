@@ -8,7 +8,7 @@ import java.lang.annotation.*;
 /**
  * DELETE请求
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-06
  */
 @Target({ElementType.TYPE, ElementType.METHOD})

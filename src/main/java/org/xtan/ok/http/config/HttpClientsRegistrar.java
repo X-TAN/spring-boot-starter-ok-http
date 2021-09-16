@@ -27,7 +27,7 @@ import java.util.Set;
 /**
  * 实现HttpClient自动装配
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-11
  */
 public class HttpClientsRegistrar implements ImportBeanDefinitionRegistrar, ResourceLoaderAware, EnvironmentAware {

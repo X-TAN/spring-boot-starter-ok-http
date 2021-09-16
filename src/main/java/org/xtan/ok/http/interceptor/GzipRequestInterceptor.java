@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * okhttp的gzip
  *
- * @author: X-TAN
+ * @author: XOptional-TAN
  * @date: 2021-08-05
  */
 public class GzipRequestInterceptor implements Interceptor {
